@@ -10,12 +10,11 @@ def function_Random(min, max):
 def function_operation():
     return random.choice(['+', '-', '*'])
 
-
-def function_Calculation(n1, n2, o):
-    Cal = f"{n1} {o} {n2}"
-    if o == '+': a = n1 + n2
-    elif o == '-': a = n1 - n2
-    else: final_result = n1 * n2
+def function_Calculation(num_1, num_2, operation):
+    Cal = f"{num_1} {operation} {num_2}"
+    if operation == '+': a = num_1 + num_2
+    elif operation == '-': a = num_1 - num_2
+    else: final_result = num_1 * num_2
     return Cal, final_result
 
 def math_quiz():
@@ -25,10 +24,10 @@ def math_quiz():
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
-    for i_ in range(total_questions):
-        n1 = function_Random(1, 10); n2 = function_Random(1, 10); o = function_operation()
+    for i in range(total_questions):
+        num_1 = function_Random(1, 10); num_2 = function_Random(1, 10); operation = function_operation()
 
-        PROBLEM, ANSWER = function_C(n1, n2, o)
+        PROBLEM, ANSWER = function_C(num_1, num_2, operation)
         print(f"\nQuestion: {PROBLEM}")
         useranswer = input("Your answer: ")
         useranswer = int(useranswer)
