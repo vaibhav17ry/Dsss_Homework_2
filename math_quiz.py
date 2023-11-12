@@ -1,7 +1,7 @@
 import random
 
 
-def function_Range(min, max):
+def function_Random(min, max):
     """
     Random integer.
     """
@@ -11,7 +11,7 @@ def function_operation():
     return random.choice(['+', '-', '*'])
 
 
-def function_Equations(n1, n2, o):
+def function_Calculation(n1, n2, o):
     Cal = f"{n1} {o} {n2}"
     if o == '+': a = n1 + n2
     elif o == '-': a = n1 - n2
@@ -19,14 +19,14 @@ def function_Equations(n1, n2, o):
     return Cal, final_result
 
 def math_quiz():
-    points = 0
-    total_questions = 5
+    Points = 0
+    Total_questions = 5
 
     print("Welcome to the Math Quiz Game!")
     print("You will be presented with math problems, and you need to provide the correct answers.")
 
     for i_ in range(total_questions):
-        n1 = function_Range(1, 10); n2 = function_Range(1, 10); o = function_operation()
+        n1 = function_Random(1, 10); n2 = function_Random(1, 10); o = function_operation()
 
         PROBLEM, ANSWER = function_C(n1, n2, o)
         print(f"\nQuestion: {PROBLEM}")
